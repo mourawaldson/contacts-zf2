@@ -11,6 +11,8 @@ class Album
     public $artist;
     public $title;
 
+    public $inputFilter;
+
     public function exchangeArray($data)
     {
         $this->id     = (!empty($data['id'])) ? $data['id'] : null;
