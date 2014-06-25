@@ -60,6 +60,9 @@ return array(
         'aliases' => array(
             'translator' => 'MvcTranslator',
         ),
+        'factories' => array(
+            'navigation' => 'Zend\Navigation\Service\DefaultNavigationFactory',
+        ),
     ),
     'translator' => array(
         'locale' => 'en_US',
@@ -96,6 +99,35 @@ return array(
     'console' => array(
         'router' => array(
             'routes' => array(
+            ),
+        ),
+    ),
+    'navigation' => array(
+        'default' => array(
+            array(
+                'label' => 'Home',
+                'route' => 'home',
+            ),
+            array(
+                'label' => 'Album',
+                'route' => 'album',
+                'pages' => array(
+                    array(
+                        'label' => 'Add',
+                        'route' => 'album',
+                        'action' => 'add',
+                    ),
+                    array(
+                        'label' => 'Edit',
+                        'route' => 'album',
+                        'action' => 'edit',
+                    ),
+                    array(
+                        'label' => 'Delete',
+                        'route' => 'album',
+                        'action' => 'delete',
+                    ),
+                ),
             ),
         ),
     ),
